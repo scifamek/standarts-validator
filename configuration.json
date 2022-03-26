@@ -1,0 +1,17 @@
+{
+  "base-url": "/Users/seposa/Documents/standarts-validator/project",
+  "rules": {
+    "pattern_not_allowed": {
+      "enable": true,
+      "coverage": 0.2,
+      "data": {
+        "searches": [
+          {
+            "searched-patterns": ["(console.log)"],
+            "files-to-search-in": ["*.js"]
+          }
+        ]
+      }
+    }
+  }
+}
