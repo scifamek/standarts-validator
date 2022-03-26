@@ -1,14 +1,19 @@
-import sys
+import argparse
 import json
 from rules_mapper import MAPPER
-argv = sys.argv
+
+parser = argparse.ArgumentParser()
+parser.add_argument("-o", "--output", help = "Path to put the report")
+parser.add_argument("-c", "--config", help = "Path of the configuration")
+args = vars(parser.parse_args())
+
 output = 'output.json'
-argv_len = len(argv)
-if(argv_len >= 2):
+
+if(args['config'] != None):
     report = {}
-    if(argv_len == 3):
-        output = argv[2]
-    configuration_path = argv[1]
+    if(args['output'] != None):
+        output = args['output']
+    configuration_path = args['config']
 
     with open(configuration_path, 'r', encoding='utf-8') as t:
         CONFIGURATION = json.load(t)
@@ -17,10 +22,13 @@ if(argv_len >= 2):
         rule_config = CONFIGURATION['rules'][rule]
         if(rule_config['enable'] and rule in MAPPER):
             rule_obj = MAPPER[rule](
-                CONFIGURATION['base-url'], rule_config['coverage'], rule_config['data'])
+                CONFIGURATION['base-url'],
+                rule_config['coverage'],
+                rule_config['data']
+            )
 
             response = rule_obj()
-            report[rule]=response.toJson()
+            report[rule] = response.toJson()
     with open(output, 'w', encoding='utf-8') as t:
         t.write(json.dumps(report, indent=2))
 else:
