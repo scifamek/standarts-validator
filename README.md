@@ -1,6 +1,7 @@
 # standarts-validator
 run
-pipx install virtualenv
+pip3 install virtualenv
+pip3 -m venv env
 pip install -r packages
 
 run this command
