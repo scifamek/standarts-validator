@@ -52,11 +52,6 @@ class AllowedStructureByFolder:
                             'errors': list(invalid_files)
                         }
                     )
-
-
-
-
-
         status = True
         coverage = 1
         if(universe > 0):

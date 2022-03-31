@@ -1,10 +1,20 @@
 {
   "pattern_not_allowed": {
-    "status": true,
-    "coverage": 0.5,
-    "universe": 2,
-    "errors": 1,
+    "status": false,
+    "coverage": 0.0,
+    "universe": 4,
+    "errors": 4,
     "files": [
+      {
+        "file": "D:/Documents/projects/standarts-validator/project/a copy.js",
+        "errors": [
+          {
+            "line": 2,
+            "col": 1,
+            "find": "// Pero sin comentarios"
+          }
+        ]
+      },
       {
         "file": "D:/Documents/projects/standarts-validator/project/a.js",
         "errors": [
@@ -17,6 +27,31 @@
             "line": 1,
             "col": 20,
             "find": "console.log"
+          }
+        ]
+      },
+      {
+        "file": "D:/Documents/projects/standarts-validator/project/domain/by.repository.js",
+        "errors": [
+          {
+            "line": 1,
+            "col": 1,
+            "find": "// No se pueden tener comentarios"
+          },
+          {
+            "line": 2,
+            "col": 1,
+            "find": "// Asi que la cago"
+          }
+        ]
+      },
+      {
+        "file": "D:/Documents/projects/standarts-validator/project/domain/hol.usecase.js",
+        "errors": [
+          {
+            "line": 1,
+            "col": 1,
+            "find": "//hola"
           }
         ]
       }

@@ -11,7 +11,6 @@ def get_file_paths(patterns: List[str], base_url: str = None):
                             patterns
                         )
                     )
-        print(333, new_patterns)
     response = []
     for pattern in new_patterns:
         response = response + glob.glob(pattern, recursive=True)

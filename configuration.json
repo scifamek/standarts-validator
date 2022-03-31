@@ -7,8 +7,8 @@
       "data": {
         "searches": [
           {
-            "searched-patterns": ["(console.log)"],
-            "files-to-search-in": ["*.js"]
+            "searched-patterns": ["(console.log)", "(//[ ]*[a-zA-Z0-9 ]+)"],
+            "files-to-search-in": ["**/*.js"]
           }
         ]
       }
