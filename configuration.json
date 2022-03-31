@@ -1,5 +1,5 @@
 {
-  "base-url": "/Users/seposa/Documents/standarts-validator/project",
+  "base-url": "D:/Documents/projects/standarts-validator/project",
   "rules": {
     "pattern_not_allowed": {
       "enable": true,
@@ -9,6 +9,19 @@
           {
             "searched-patterns": ["(console.log)"],
             "files-to-search-in": ["*.js"]
+          }
+        ]
+      }
+    },
+    "allowed_structure_by_folder": {
+      "enable": true,
+      "coverage": 0.2,
+      "data": {
+        "folders": [
+          {
+            "folder-pattern": "domain",
+            "valid-files-pattern": ["*.usecase.js"],
+            "invalid-files-pattern": ["*.repository.js"]
           }
         ]
       }

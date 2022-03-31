@@ -1,0 +1,42 @@
+{
+  "pattern_not_allowed": {
+    "status": true,
+    "coverage": 0.5,
+    "universe": 2,
+    "errors": 1,
+    "files": [
+      {
+        "file": "D:/Documents/projects/standarts-validator/project/a.js",
+        "errors": [
+          {
+            "line": 1,
+            "col": 4,
+            "find": "console.log"
+          },
+          {
+            "line": 1,
+            "col": 20,
+            "find": "console.log"
+          }
+        ]
+      }
+    ]
+  },
+  "allowed_structure_by_folder": {
+    "status": true,
+    "coverage": 0.5,
+    "universe": 2,
+    "errors": 1,
+    "files": [
+      {
+        "folder": "domain",
+        "valid-pattern": [
+          "*.usecase.js"
+        ],
+        "errors": [
+          "D:/Documents/projects/standarts-validator/project/domain/by.repository.js"
+        ]
+      }
+    ]
+  }
+}

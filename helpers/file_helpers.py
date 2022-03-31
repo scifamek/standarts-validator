@@ -11,12 +11,16 @@ def get_file_paths(patterns: List[str], base_url: str = None):
                             patterns
                         )
                     )
+        print(333, new_patterns)
     response = []
     for pattern in new_patterns:
-        response = response + glob.glob(pattern)
-    return response
+        response = response + glob.glob(pattern, recursive=True)
+    return list(map(lambda x: x.replace('\\', '/'),response))
 
 def search_pattern_in_file(pattern: str, file_path: str):
+    '''
+    Search a specific pattern
+    '''
     import re
     response = []
     with open(file_path, 'r', encoding='utf-8') as t:
