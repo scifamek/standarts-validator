@@ -1,11 +1,22 @@
 # standarts-validator
 run
-pip3 install virtualenv
-pip3 -m venv env
+
+## 1. Install virtualenv
+pip install virtualenv
+
+## 2. Create and activate virtualenv
+virtualenv env
+.\env\Scripts\activate   
+
+## 3. Install packages
 pip install -r packages
 
-run this command
-py main.py  /Users/seposa/Documents/standarts-validator/configuration.json report.json
+## 4. Execute the rules
+py main.py -c configuration.json -o report.json
 
-for create a exe
-pyinstaller --onefile pythonScriptName.py
+## 5. Help
+py main.py -h
+
+## 6. Create a installer for Windows
+pyinstaller --onefile main.py
+

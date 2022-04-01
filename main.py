@@ -18,17 +18,17 @@ if(args['config'] != None):
     with open(configuration_path, 'r', encoding='utf-8') as t:
         CONFIGURATION = json.load(t)
 
-    for rule in CONFIGURATION['rules']:
-        rule_config = CONFIGURATION['rules'][rule]
-        if(rule_config['enable'] and rule in MAPPER):
-            rule_obj = MAPPER[rule](
+    for rule_config in CONFIGURATION['rules']:
+        rule_kind = rule_config['kind']
+        rule_identifier = rule_config['identifier']
+        if(rule_config['enable'] and rule_kind in MAPPER):
+            rule_obj = MAPPER[rule_kind](
                 CONFIGURATION['base-url'],
                 rule_config['coverage'],
                 rule_config['data']
             )
-
             response = rule_obj()
-            report[rule] = response.toJson()
+            report[rule_identifier] = response.toJson()
     with open(output, 'w', encoding='utf-8') as t:
         t.write(json.dumps(report, indent=2))
 else:

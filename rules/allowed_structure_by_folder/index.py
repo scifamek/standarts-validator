@@ -1,5 +1,4 @@
 from typing import Any
-import numpy as np
 from models.response_model import ResponseModel
 
 from helpers.file_helpers import get_file_paths, search_pattern_in_file
