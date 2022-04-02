@@ -1,5 +1,6 @@
 import argparse
 import json
+
 from rules_mapper import MAPPER
 
 parser = argparse.ArgumentParser()
