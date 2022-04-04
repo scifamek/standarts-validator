@@ -34,8 +34,12 @@ if(args['config'] != None):
             response = rule_obj()
             report[rule_identifier] = response.toJson()
             status =  status and response.status
+    final_response = {
+        'status': status,
+        'rules': report
+    }
     with open(output, 'w', encoding='utf-8') as t:
-        t.write(json.dumps(report, indent=2))
+        t.write(json.dumps(final_response, indent=2))
     
     if(not status):
         print(status)
