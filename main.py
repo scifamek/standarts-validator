@@ -1,5 +1,7 @@
 import argparse
 import json
+import os
+import sys
 
 from rules_mapper import MAPPER
 
@@ -11,6 +13,7 @@ args = vars(parser.parse_args())
 output = 'output.json'
 
 if(args['config'] != None):
+    status = True
     report = {}
     if(args['output'] != None):
         output = args['output']
@@ -30,7 +33,12 @@ if(args['config'] != None):
             )
             response = rule_obj()
             report[rule_identifier] = response.toJson()
+            status =  status and response.status
     with open(output, 'w', encoding='utf-8') as t:
         t.write(json.dumps(report, indent=2))
+    
+    if(not status):
+        print(status)
+        os._exit(0)
 else:
     print('You have to pass the configuration file path.')
