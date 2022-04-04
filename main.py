@@ -35,7 +35,7 @@ if(args['config'] != None):
             report[rule_identifier] = response.toJson()
             status =  status and response.status
     final_response = {
-        'status': status,
+        'status': 'failure-sv-report' if not status else 'success-sv-report',
         'rules': report
     }
     with open(output, 'w', encoding='utf-8') as t:
