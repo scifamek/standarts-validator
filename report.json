@@ -1,77 +1,446 @@
 {
-  "pattern_not_allowed": {
-    "status": false,
-    "coverage": 0.0,
-    "universe": 4,
-    "errors": 4,
-    "files": [
-      {
-        "file": "D:/Documents/projects/standarts-validator/project/a copy.js",
-        "errors": [
-          {
-            "line": 2,
-            "col": 1,
-            "find": "// Pero sin comentarios"
-          }
-        ]
-      },
-      {
-        "file": "D:/Documents/projects/standarts-validator/project/a.js",
-        "errors": [
-          {
-            "line": 1,
-            "col": 4,
-            "find": "console.log"
-          },
-          {
-            "line": 1,
-            "col": 20,
-            "find": "console.log"
-          }
-        ]
-      },
-      {
-        "file": "D:/Documents/projects/standarts-validator/project/domain/by.repository.js",
-        "errors": [
-          {
-            "line": 1,
-            "col": 1,
-            "find": "// No se pueden tener comentarios"
-          },
-          {
-            "line": 2,
-            "col": 1,
-            "find": "// Asi que la cago"
-          }
-        ]
-      },
-      {
-        "file": "D:/Documents/projects/standarts-validator/project/domain/hol.usecase.js",
-        "errors": [
-          {
-            "line": 1,
-            "col": 1,
-            "find": "//hola"
-          }
-        ]
-      }
-    ]
-  },
-  "allowed_structure_by_folder": {
-    "status": true,
-    "coverage": 0.5,
-    "universe": 2,
-    "errors": 1,
-    "files": [
-      {
-        "folder": "domain",
-        "valid-pattern": [
-          "*.usecase.js"
-        ],
-        "errors": [
-          "D:/Documents/projects/standarts-validator/project/domain/by.repository.js"
-        ]
-      }
-    ]
+  "status": "failure-sv-report",
+  "rules": {
+    "printers_are_not_allowed": {
+      "status": true,
+      "coverage": 0.9801980198019802,
+      "universe": 101,
+      "errors": 2,
+      "files": [
+        {
+          "file": "../scifamek-utils/projects/angular-components-library/select/select.behavior.ts",
+          "errors": [
+            {
+              "line": 59,
+              "col": 5,
+              "find": "console.log"
+            },
+            {
+              "line": 69,
+              "col": 9,
+              "find": "console.log"
+            },
+            {
+              "line": 78,
+              "col": 9,
+              "find": "console.log"
+            }
+          ]
+        },
+        {
+          "file": "../scifamek-utils/projects/angular-components-library/select/select.component.ts",
+          "errors": [
+            {
+              "line": 63,
+              "col": 11,
+              "find": "console.log"
+            }
+          ]
+        }
+      ]
+    },
+    "pixel_unit_not_allowed": {
+      "status": true,
+      "coverage": 0.6666666666666667,
+      "universe": 18,
+      "errors": 6,
+      "files": [
+        {
+          "file": "../scifamek-utils/projects/angular-components-library/dropdown-item/styles/dropdown-item.component.scss",
+          "errors": [
+            {
+              "line": 28,
+              "col": 16,
+              "find": "8px"
+            },
+            {
+              "line": 29,
+              "col": 18,
+              "find": "16px"
+            },
+            {
+              "line": 30,
+              "col": 19,
+              "find": "8px"
+            },
+            {
+              "line": 32,
+              "col": 11,
+              "find": "48px"
+            },
+            {
+              "line": 33,
+              "col": 18,
+              "find": "16px"
+            },
+            {
+              "line": 35,
+              "col": 18,
+              "find": "8px"
+            },
+            {
+              "line": 39,
+              "col": 20,
+              "find": "12px"
+            },
+            {
+              "line": 48,
+              "col": 15,
+              "find": "16px"
+            },
+            {
+              "line": 51,
+              "col": 18,
+              "find": "12px"
+            },
+            {
+              "line": 54,
+              "col": 18,
+              "find": "14px"
+            }
+          ]
+        },
+        {
+          "file": "../scifamek-utils/projects/angular-components-library/input/styles/input.foundation.scss",
+          "errors": [
+            {
+              "line": 18,
+              "col": 25,
+              "find": "30px"
+            }
+          ]
+        },
+        {
+          "file": "../scifamek-utils/projects/angular-components-library/scss-core/components/abstract-avatar/abstract-avatar.scss",
+          "errors": [
+            {
+              "line": 2,
+              "col": 11,
+              "find": "32px"
+            },
+            {
+              "line": 3,
+              "col": 10,
+              "find": "32px"
+            },
+            {
+              "line": 4,
+              "col": 18,
+              "find": "12px"
+            }
+          ]
+        },
+        {
+          "file": "../scifamek-utils/projects/angular-components-library/scss-core/components/abstract-input/abstract-input.foundation.scss",
+          "errors": [
+            {
+              "line": 17,
+              "col": 34,
+              "find": "30px"
+            }
+          ]
+        },
+        {
+          "file": "../scifamek-utils/projects/angular-components-library/scss-core/protons/sizing.scss",
+          "errors": [
+            {
+              "line": 1,
+              "col": 15,
+              "find": "10px"
+            }
+          ]
+        },
+        {
+          "file": "../scifamek-utils/projects/angular-components-library/select/styles/select.component.scss",
+          "errors": [
+            {
+              "line": 11,
+              "col": 20,
+              "find": "16px"
+            },
+            {
+              "line": 15,
+              "col": 17,
+              "find": "8px"
+            },
+            {
+              "line": 16,
+              "col": 14,
+              "find": "8px"
+            },
+            {
+              "line": 18,
+              "col": 17,
+              "find": "0px"
+            },
+            {
+              "line": 18,
+              "col": 21,
+              "find": "4px"
+            },
+            {
+              "line": 18,
+              "col": 25,
+              "find": "48px"
+            },
+            {
+              "line": 18,
+              "col": 30,
+              "find": "0px"
+            },
+            {
+              "line": 21,
+              "col": 15,
+              "find": "48px"
+            }
+          ]
+        }
+      ]
+    },
+    "comments_are_not_allowed": {
+      "status": false,
+      "coverage": 0.9405940594059405,
+      "universe": 101,
+      "errors": 6,
+      "files": [
+        {
+          "file": "../scifamek-utils/projects/angular-components-library/select/select.component.ts",
+          "errors": [
+            {
+              "line": 65,
+              "col": 11,
+              "find": "// this"
+            },
+            {
+              "line": 79,
+              "col": 5,
+              "find": "// this"
+            },
+            {
+              "line": 80,
+              "col": 5,
+              "find": "//   let data"
+            },
+            {
+              "line": 81,
+              "col": 5,
+              "find": "//     "
+            },
+            {
+              "line": 82,
+              "col": 5,
+              "find": "//     "
+            },
+            {
+              "line": 83,
+              "col": 5,
+              "find": "//       "
+            },
+            {
+              "line": 84,
+              "col": 5,
+              "find": "//         acc"
+            },
+            {
+              "line": 85,
+              "col": 5,
+              "find": "//         acc"
+            },
+            {
+              "line": 86,
+              "col": 5,
+              "find": "//         return acc"
+            },
+            {
+              "line": 87,
+              "col": 5,
+              "find": "//       "
+            },
+            {
+              "line": 88,
+              "col": 5,
+              "find": "//       "
+            },
+            {
+              "line": 89,
+              "col": 5,
+              "find": "//         text"
+            },
+            {
+              "line": 90,
+              "col": 5,
+              "find": "//         value"
+            },
+            {
+              "line": 91,
+              "col": 5,
+              "find": "//       "
+            },
+            {
+              "line": 92,
+              "col": 5,
+              "find": "//     "
+            },
+            {
+              "line": 93,
+              "col": 5,
+              "find": "//   this"
+            },
+            {
+              "line": 94,
+              "col": 5,
+              "find": "//     relativeProperty"
+            },
+            {
+              "line": 95,
+              "col": 5,
+              "find": "//     "
+            },
+            {
+              "line": 96,
+              "col": 5,
+              "find": "//   "
+            },
+            {
+              "line": 97,
+              "col": 5,
+              "find": "// "
+            },
+            {
+              "line": 102,
+              "col": 5,
+              "find": "// if "
+            },
+            {
+              "line": 103,
+              "col": 5,
+              "find": "//   this"
+            },
+            {
+              "line": 104,
+              "col": 5,
+              "find": "// "
+            }
+          ]
+        },
+        {
+          "file": "../scifamek-utils/projects/showcase/e2e/src/app.e2e-spec.ts",
+          "errors": [
+            {
+              "line": 17,
+              "col": 5,
+              "find": "// Assert that there are no errors emitted from the browser"
+            }
+          ]
+        },
+        {
+          "file": "../scifamek-utils/projects/showcase/src/polyfills.ts",
+          "errors": [
+            {
+              "line": 14,
+              "col": 24,
+              "find": "//angular"
+            },
+            {
+              "line": 34,
+              "col": 65,
+              "find": "// disable patch requestAnimationFrame"
+            },
+            {
+              "line": 35,
+              "col": 55,
+              "find": "// disable patch onProperty such as onclick"
+            },
+            {
+              "line": 36,
+              "col": 79,
+              "find": "// disable patch specified eventNames"
+            },
+            {
+              "line": 48,
+              "col": 20,
+              "find": "// Included with Angular CLI"
+            }
+          ]
+        },
+        {
+          "file": "../scifamek-utils/projects/showcase/src/test.ts",
+          "errors": [
+            {
+              "line": 1,
+              "col": 1,
+              "find": "// This file is required by karma"
+            },
+            {
+              "line": 17,
+              "col": 1,
+              "find": "// First"
+            },
+            {
+              "line": 24,
+              "col": 1,
+              "find": "// Then we find all the tests"
+            },
+            {
+              "line": 26,
+              "col": 1,
+              "find": "// And load the modules"
+            }
+          ]
+        },
+        {
+          "file": "../scifamek-utils/projects/showcase/src/app/components/ad-host.directive.spec.ts",
+          "errors": [
+            {
+              "line": 5,
+              "col": 5,
+              "find": "// const directive "
+            },
+            {
+              "line": 6,
+              "col": 5,
+              "find": "// expect"
+            }
+          ]
+        },
+        {
+          "file": "../scifamek-utils/projects/showcase/src/environments/environment.ts",
+          "errors": [
+            {
+              "line": 1,
+              "col": 1,
+              "find": "// This file can be replaced during build by using the "
+            },
+            {
+              "line": 2,
+              "col": 1,
+              "find": "// "
+            },
+            {
+              "line": 3,
+              "col": 1,
+              "find": "// The list of file replacements can be found in "
+            },
+            {
+              "line": 16,
+              "col": 1,
+              "find": "// import "
+            },
+            {
+              "line": 16,
+              "col": 42,
+              "find": "// Included with Angular CLI"
+            }
+          ]
+        }
+      ]
+    },
+    "valid_files_by_component": {
+      "status": true,
+      "coverage": 1,
+      "universe": 0,
+      "errors": 0,
+      "files": []
+    }
   }
 }
